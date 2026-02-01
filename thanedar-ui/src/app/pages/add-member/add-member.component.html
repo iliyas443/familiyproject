@@ -1,0 +1,27 @@
+<mat-card>
+  <h2>Add New Family Member</h2>
+  <form (ngSubmit)="save()">
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput [(ngModel)]="member.name" name="name" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Relation</mat-label>
+      <input matInput [(ngModel)]="member.relation" name="relation" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Age</mat-label>
+      <input matInput type="number" [(ngModel)]="member.age" name="age" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Occupation</mat-label>
+      <input matInput [(ngModel)]="member.occupation" name="occupation" required>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Save</button>
+    <button mat-raised-button color="warn" type="button" (click)="cancel()">Cancel</button>
+  </form>
+</mat-card>
